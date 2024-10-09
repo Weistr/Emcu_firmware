@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "../target/GD32F303/target.h"
+
+#include "board.h"
+#include "stdbool.h"
 
 #endif /* MAIN_H */

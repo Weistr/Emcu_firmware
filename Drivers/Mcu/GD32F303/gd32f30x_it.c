@@ -37,7 +37,7 @@ OF SUCH DAMAGE.
 
 #include "gd32f30x_it.h"
 #include "main.h"
-#include "systick.h"
+#include "task.h"
 
 /*!
     \brief      this function handles NMI exception
@@ -139,6 +139,5 @@ void PendSV_Handler(void)
 */
 void SysTick_Handler(void)
 {
-
-    delay_decrement();
+    Task_Marks_Handler_Callback();
 }

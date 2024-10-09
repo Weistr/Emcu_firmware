@@ -3,7 +3,11 @@
         {
             "name": "Win32",       
             "includePath": [
-                "../../**"
+                "../../UserApp/**",
+                "../../Target/GD32F303/**",
+                "../../Drivers/**"
+
+
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",

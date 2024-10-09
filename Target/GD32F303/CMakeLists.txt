@@ -58,10 +58,10 @@ endif ()
 
 #请在此处添加头文件路径
 include_directories(
-    GD32F30x_Firmware_Library_V220/CMSIS
-    GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
-    GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
-    app/inc
+    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS
+    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
+    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
+    ../UserApp/Inc
 )
 
 ADD_DEFINITIONS(
@@ -70,10 +70,10 @@ ADD_DEFINITIONS(
 )
 #请在此处此处添加.c文件目录
 file(GLOB_RECURSE SOURCES 
-    "GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd3.s"    
-    "GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/*.c"
-    "GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
-    "app/*.c*"
+    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd3.s"    
+    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/*.c"
+    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
+    "../UserApp/*.c*"
 )
 
 

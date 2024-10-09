@@ -15,5 +15,5 @@ typedef struct
 
 void Task_Marks_Handler_Callback(void);
 void Task_Pro_Handler_Callback(void);
-void user_main(void);
+
 #endif // !TASK_H
