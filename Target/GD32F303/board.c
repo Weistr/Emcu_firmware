@@ -27,10 +27,14 @@ void systick_config(void)
 }
 
 
-void boardInit()
+void boardInit(void)
 {
     systick_config();
     gpioConfig();
     timerConfig();
 }
 
+void ssss()
+{
+    
+}

@@ -1,0 +1,15 @@
+file(GLOB_RECURSE SOURCES 
+    "/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd3.s"    
+    "/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/*.c"
+    "/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
+    "/UserApp/*.c"
+    "/Target/GD32F303/board.c"
+ 
+)
+include_directories(
+    /Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS
+    /Drivers/Mcu/GD32F303/CMSIS/GD/GD32F30x/Include
+    /Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
+    /UserApp/Inc
+    /Target/GD32F303
+)

@@ -4,5 +4,5 @@
 
 #include "gd32f30x.h"
 void boardInit(void);
-
+void ssss(void);
 #endif // 

@@ -1,13 +1,10 @@
 
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_VERSION 1)
-cmake_minimum_required(VERSION 3.10)
+
 
 # specify cross compilers and tools
 SET(CMAKE_C_COMPILER_WORKS   1)	# 省略编译器检查
 SET(CMAKE_CXX_COMPILER_WORKS 1)	# 省略编译器检查
 
-set(gccpath "c:/Tools/GD/EmbeddedBuilder_v1.4.1.23782/EmbeddedBuilder_v1.4.1.23782/Tools/GNU Tools ARM Embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin")
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
 set(CMAKE_ASM_COMPILER  arm-none-eabi-gcc)
@@ -18,7 +15,7 @@ set(SIZE arm-none-eabi-size)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
-project(Markbase_GD32F303CBT6 C CXX ASM)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
@@ -58,10 +55,12 @@ endif ()
 
 #请在此处添加头文件路径
 include_directories(
-    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS
-    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
-    ../Drivers/Mcu/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
-    ../UserApp/Inc
+    ${PROJECT_SOURCE_DIR}//Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS
+    ${PROJECT_SOURCE_DIR}/Drivers/Mcu//GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
+    ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
+    ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/Inc
+    ${PROJECT_SOURCE_DIR}/UserApp/Inc
+    ${CMAKE_CURRENT_LIST_DIR}
 )
 
 ADD_DEFINITIONS(
@@ -70,14 +69,16 @@ ADD_DEFINITIONS(
 )
 #请在此处此处添加.c文件目录
 file(GLOB_RECURSE SOURCES 
-    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd3.s"    
-    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/*.c"
-    "../Drivers/Mcu/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
-    "../UserApp/*.c*"
+    "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.s"    
+    "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/*.c"
+    "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
+    "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/*.c"
+    "${PROJECT_SOURCE_DIR}/UserApp/*.c"
+    "${CMAKE_CURRENT_LIST_DIR}/board.c"
+ 
 )
 
-
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/gd32f30x_flash.ld)
+set(LINKER_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/gd32f3xx_flash.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)

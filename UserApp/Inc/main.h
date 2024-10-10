@@ -2,7 +2,6 @@
 #define MAIN_H
 
 
-#include "board.h"
 #include "stdbool.h"
-
+#include "board.h"
 #endif /* MAIN_H */
