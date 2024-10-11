@@ -1,8 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-
-#include "gd32f30x.h"
+#include "main.h"
+#include "gd32e23x.h"
 void boardInit(void);
 void boardApp(void);
 #endif // 

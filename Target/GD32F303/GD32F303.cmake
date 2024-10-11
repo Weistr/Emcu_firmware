@@ -55,12 +55,12 @@ endif ()
 
 #请在此处添加头文件路径
 include_directories(
-    ${PROJECT_SOURCE_DIR}//Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS
-    ${PROJECT_SOURCE_DIR}/Drivers/Mcu//GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
+    ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS
+    ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Include
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/Inc
     ${PROJECT_SOURCE_DIR}/UserApp/Inc
-    ${CMAKE_CURRENT_LIST_DIR}
+    ${PROJECT_SOURCE_DIR}/Target/GD32F303
 )
 
 ADD_DEFINITIONS(
@@ -74,11 +74,11 @@ file(GLOB_RECURSE SOURCES
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/*.c"
     "${PROJECT_SOURCE_DIR}/UserApp/*.c"
-    "${CMAKE_CURRENT_LIST_DIR}/board.c"
+    "${PROJECT_SOURCE_DIR}/Target/GD32F303/board.c"
  
 )
 
-set(LINKER_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/gd32f3xx_flash.ld)
+set(LINKER_SCRIPT ${PROJECT_SOURCE_DIR}/Target/GD32F303/gd32f3xx_flash.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)

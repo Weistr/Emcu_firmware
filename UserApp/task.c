@@ -2,16 +2,7 @@
 #include "board.h"
 void basicTask(void)
 {
-    static bool flag = 0;
-    flag =! flag;
-    if (flag)
-    {
-        gpio_bit_reset(GPIOC, GPIO_PIN_13);  //PC13置0
-    }
-    else
-    {
-        gpio_bit_set(GPIOC, GPIO_PIN_13);  //PC13置0
-    }
+	boardApp();
 }
 //www.stcmcu.com
 //========================================================================
