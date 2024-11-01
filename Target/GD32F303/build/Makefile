@@ -125,8 +125,736 @@ EMCU_FW.elf: cmake_check_build_system
 
 # fast build rule for target.
 EMCU_FW.elf/fast:
-	$(MAKE) $(MAKESILENT) -f Target\GD32F303\CMakeFiles\EMCU_FW.elf.dir\build.make Target/GD32F303/CMakeFiles/EMCU_FW.elf.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/build
 .PHONY : EMCU_FW.elf/fast
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.s.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.s.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.s.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.s.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.c.s
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.obj: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.obj
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.i: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.i
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.i
+
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.s: Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.s
+.PHONY : Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.c.s
+
+Drivers/Mcu/GD32F303/gd32f30x_it.obj: Drivers/Mcu/GD32F303/gd32f30x_it.c.obj
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/gd32f30x_it.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/gd32f30x_it.c.obj
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.c.obj
+
+Drivers/Mcu/GD32F303/gd32f30x_it.i: Drivers/Mcu/GD32F303/gd32f30x_it.c.i
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/gd32f30x_it.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/gd32f30x_it.c.i
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.c.i
+
+Drivers/Mcu/GD32F303/gd32f30x_it.s: Drivers/Mcu/GD32F303/gd32f30x_it.c.s
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/gd32f30x_it.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/gd32f30x_it.c.s
+.PHONY : Drivers/Mcu/GD32F303/gd32f30x_it.c.s
+
+Drivers/Mcu/GD32F303/timer.obj: Drivers/Mcu/GD32F303/timer.c.obj
+.PHONY : Drivers/Mcu/GD32F303/timer.obj
+
+# target to build an object file
+Drivers/Mcu/GD32F303/timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/timer.c.obj
+.PHONY : Drivers/Mcu/GD32F303/timer.c.obj
+
+Drivers/Mcu/GD32F303/timer.i: Drivers/Mcu/GD32F303/timer.c.i
+.PHONY : Drivers/Mcu/GD32F303/timer.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32F303/timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/timer.c.i
+.PHONY : Drivers/Mcu/GD32F303/timer.c.i
+
+Drivers/Mcu/GD32F303/timer.s: Drivers/Mcu/GD32F303/timer.c.s
+.PHONY : Drivers/Mcu/GD32F303/timer.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32F303/timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32F303/timer.c.s
+.PHONY : Drivers/Mcu/GD32F303/timer.c.s
+
+Target/GD32F303/board.obj: Target/GD32F303/board.c.obj
+.PHONY : Target/GD32F303/board.obj
+
+# target to build an object file
+Target/GD32F303/board.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32F303/board.c.obj
+.PHONY : Target/GD32F303/board.c.obj
+
+Target/GD32F303/board.i: Target/GD32F303/board.c.i
+.PHONY : Target/GD32F303/board.i
+
+# target to preprocess a source file
+Target/GD32F303/board.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32F303/board.c.i
+.PHONY : Target/GD32F303/board.c.i
+
+Target/GD32F303/board.s: Target/GD32F303/board.c.s
+.PHONY : Target/GD32F303/board.s
+
+# target to generate assembly for a file
+Target/GD32F303/board.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32F303/board.c.s
+.PHONY : Target/GD32F303/board.c.s
+
+UserApp/main.obj: UserApp/main.c.obj
+.PHONY : UserApp/main.obj
+
+# target to build an object file
+UserApp/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/main.c.obj
+.PHONY : UserApp/main.c.obj
+
+UserApp/main.i: UserApp/main.c.i
+.PHONY : UserApp/main.i
+
+# target to preprocess a source file
+UserApp/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/main.c.i
+.PHONY : UserApp/main.c.i
+
+UserApp/main.s: UserApp/main.c.s
+.PHONY : UserApp/main.s
+
+# target to generate assembly for a file
+UserApp/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/main.c.s
+.PHONY : UserApp/main.c.s
+
+UserApp/task.obj: UserApp/task.c.obj
+.PHONY : UserApp/task.obj
+
+# target to build an object file
+UserApp/task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/task.c.obj
+.PHONY : UserApp/task.c.obj
+
+UserApp/task.i: UserApp/task.c.i
+.PHONY : UserApp/task.i
+
+# target to preprocess a source file
+UserApp/task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/task.c.i
+.PHONY : UserApp/task.c.i
+
+UserApp/task.s: UserApp/task.c.s
+.PHONY : UserApp/task.s
+
+# target to generate assembly for a file
+UserApp/task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/UserApp/task.c.s
+.PHONY : UserApp/task.c.s
 
 # Help Target
 help:
@@ -137,6 +865,97 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... EMCU_FW.elf
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/GCC/startup_gd32f30x_hd.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/CMSIS/GD/GD32F30x/Source/system_gd32f30x.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_adc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_bkp.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_can.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_crc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_ctc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dac.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dbg.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_dma.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_enet.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exmc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_exti.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fmc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_fwdgt.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_gpio.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_i2c.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_misc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_pmu.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rcu.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_rtc.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_sdio.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_spi.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_timer.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_usart.s
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.obj
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.i
+	@echo ... Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/gd32f30x_wwdgt.s
+	@echo ... Drivers/Mcu/GD32F303/gd32f30x_it.obj
+	@echo ... Drivers/Mcu/GD32F303/gd32f30x_it.i
+	@echo ... Drivers/Mcu/GD32F303/gd32f30x_it.s
+	@echo ... Drivers/Mcu/GD32F303/timer.obj
+	@echo ... Drivers/Mcu/GD32F303/timer.i
+	@echo ... Drivers/Mcu/GD32F303/timer.s
+	@echo ... Target/GD32F303/board.obj
+	@echo ... Target/GD32F303/board.i
+	@echo ... Target/GD32F303/board.s
+	@echo ... UserApp/main.obj
+	@echo ... UserApp/main.i
+	@echo ... UserApp/main.s
+	@echo ... UserApp/task.obj
+	@echo ... UserApp/task.i
+	@echo ... UserApp/task.s
 .PHONY : help
 
 

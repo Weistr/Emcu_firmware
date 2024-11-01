@@ -2,16 +2,7 @@
 #include "board.h"
 void basicTask(void)
 {
-    static bool flag = 0;
-    flag =! flag;
-    if (flag)
-    {
-        gpio_bit_reset(GPIOC, GPIO_PIN_13);  //PC13置0
-    }
-    else
-    {
-        gpio_bit_set(GPIOC, GPIO_PIN_13);  //PC13置0
-    }
+	boardApp();
 }
 //www.stcmcu.com
 //========================================================================
@@ -20,7 +11,7 @@ void basicTask(void)
 static TASK_COMPONENTS Task_Comps[]=
 {
 //状态  计数  周期  函数
-	{0, 500, 500, basicTask},				/* task 1 Period： 2ms*/
+	{0, 20, 20, basicTask},				/* task 1 Period： 2ms*/
 //	{0, 500, 500, task_B},					/* task 5 Period： 500ms */
 //	{0, 500, 500, task_C},					/* task 6 Period： 500ms */
 //	{0, 500, 500, task_D},					/* task 7 Period： 500ms */

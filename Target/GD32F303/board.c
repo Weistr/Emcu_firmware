@@ -26,6 +26,19 @@ void systick_config(void)
     NVIC_SetPriority(SysTick_IRQn, 0x00U);
 }
 
+void boardApp()
+{
+    static bool flag = 0;
+    flag =! flag;
+    if (flag)
+    {
+        gpio_bit_reset(GPIOC, GPIO_PIN_13);  //PC13置0
+    }
+    else
+    {
+        gpio_bit_set(GPIOC, GPIO_PIN_13);  //PC13置0
+    }    
+}
 
 void boardInit(void)
 {
@@ -34,7 +47,3 @@ void boardInit(void)
     timerConfig();
 }
 
-void ssss()
-{
-    
-}
