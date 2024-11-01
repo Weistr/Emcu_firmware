@@ -56,10 +56,17 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = C:\Users\86133\Documents\Project\EMCU\Emcu_firmware
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build
+=======
+CMAKE_SOURCE_DIR = C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build
+>>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +93,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\CMakeFiles C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\CMakeFiles C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\\CMakeFiles\progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\CMakeFiles 0
+>>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
 .PHONY : all
 
 # The main clean target
