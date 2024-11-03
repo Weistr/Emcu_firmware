@@ -60,7 +60,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Include
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/Inc
     ${PROJECT_SOURCE_DIR}/UserApp/Inc
-    ${PROJECT_SOURCE_DIR}/Target/GD32F303
+
 )
 
 ADD_DEFINITIONS(
@@ -74,7 +74,7 @@ file(GLOB_RECURSE SOURCES
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/GD32F30x_Firmware_Library_V220/GD32F30x_standard_peripheral/Source/*.c"
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32F303/*.c"
     "${PROJECT_SOURCE_DIR}/UserApp/*.c"
-    "${PROJECT_SOURCE_DIR}/Target/GD32F303/board.c"
+
  
 )
 

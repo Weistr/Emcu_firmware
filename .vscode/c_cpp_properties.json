@@ -1,24 +1,12 @@
 {
-<<<<<<< HEAD
-    
     "configurations": [
-      /*  {
+        {
             "name": "GD32F303",       
             "includePath": [
                 "${workspaceFolder}/**"
                 
             ],
-            
-=======
-    "configurations": [
-        {
-            "name": "GD32F303",       
-            "includePath": [
-                "${workspaceFolder}/**",
-                
-            ],
             /*见CMAKE*/
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
             "defines": [
                 "USE_STDPERIPH_DRIVER",
                 "GD32F30X_HD"
@@ -27,21 +15,13 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm"
-<<<<<<< HEAD
-        },*/
-=======
         },
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
         {
             "name": "GD32E230",       
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-<<<<<<< HEAD
-            
-=======
             /*见CMAKE*/
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
             "defines": [
                 "GD32E230",
                 "GD32E23x"
@@ -50,8 +30,13 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-arm"
+        },
+        {
+            "name": "TMS320F28062",       
+            "includePath": [
+                "${workspaceFolder}/**"
+            ]          
         }
-        
     ],
 
     

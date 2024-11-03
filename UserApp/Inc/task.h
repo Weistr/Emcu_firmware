@@ -3,14 +3,14 @@
 #include "main.h"
 typedef struct 
 {
-	uint8_t Run;               //任务状态：Run/Stop
-	uint16_t TIMCount;         //定时计数器
-	uint16_t TRITime;          //重载计数器
-	void (*TaskHook) (void); //任务函数
+	uint8_t Run;               //
+	uint16_t TIMCount;         //
+	uint16_t TRITime;          //
+	void (*TaskHook) (void); //
 } TASK_COMPONENTS;       
 
 //========================================================================
-//                             外部函数和变量声明
+//                             
 //========================================================================
 
 void Task_Marks_Handler_Callback(void);

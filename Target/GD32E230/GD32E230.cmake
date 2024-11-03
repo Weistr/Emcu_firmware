@@ -25,7 +25,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Include
     ${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32E230/Inc
     ${PROJECT_SOURCE_DIR}/UserApp/Inc
-    ${CMAKE_CURRENT_LIST_DIR}
+ 
 )
 add_definitions(-DDEBUG -DGD32E230 -DGD32E23x)
 
@@ -36,7 +36,6 @@ file(GLOB_RECURSE SOURCES
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/*.c"
     "${PROJECT_SOURCE_DIR}/Drivers/Mcu/GD32E230/*.c"
     "${PROJECT_SOURCE_DIR}/UserApp/*.c"
-    "${CMAKE_CURRENT_LIST_DIR}/board.c"
  
 )
 set(LINKER_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/gd32e23x_flash.ld)

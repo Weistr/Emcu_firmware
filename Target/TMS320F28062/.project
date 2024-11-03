@@ -24,4 +24,16 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Drivers</name>
+			<type>2</type>
+			<location>C:/Users/86133/Documents/Project/EMCU/Emcu_firmware/Drivers</location>
+		</link>
+		<link>
+			<name>UserApp</name>
+			<type>2</type>
+			<location>C:/Users/86133/Documents/Project/EMCU/Emcu_firmware/UserApp</location>
+		</link>
+	</linkedResources>
 </projectDescription>
