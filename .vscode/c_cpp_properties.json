@@ -1,3 +1,4 @@
+
 {
     "configurations": [
         {
@@ -34,8 +35,13 @@
         {
             "name": "TMS320F28062",       
             "includePath": [
-                "${workspaceFolder}/**"
-            ]          
+                "${workspaceFolder}/Drivers/Mcu/TMS320F28062/**",
+                "${workspaceFolder}/UserApp/**"
+            ]       ,
+            "windowsSdkVersion": "10.0.22621.0",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"               
         }
     ],
 
