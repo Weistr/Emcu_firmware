@@ -26,14 +26,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Drivers</name>
+			<name>TMS320F28062</name>
 			<type>2</type>
-			<location>C:/Users/86133/Documents/Project/EMCU/Emcu_firmware/Drivers</location>
+			<locationURI>PARENT-1-WORKSPACE_LOC/Drivers/Mcu/TMS320F28062</locationURI>
 		</link>
 		<link>
 			<name>UserApp</name>
 			<type>2</type>
-			<location>C:/Users/86133/Documents/Project/EMCU/Emcu_firmware/UserApp</location>
+			<locationURI>PARENT-1-WORKSPACE_LOC/UserApp</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
