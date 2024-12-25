@@ -157,6 +157,18 @@ InitEPwm(void)
     EPwm1Regs.TBPRD = 1000//
 
 
+    //////////////////////////////////////////////////////////////////////////////////
+    // Counter-Compare Submodule Registers 计数器比较器，与PWM占空比设置有关
+    ////////////////////////////////////////////////////////////////////////////////////
+
+
+    //
+    //SHDWBFULL Counter-compare B (CMPB) Shadow Register Full Status Flag
+    //This bit self clears once a load-strobe occurs.
+    //0 CMPB shadow FIFO not full yet
+    //1 Indicates the CMPB shadow FIFO is full; a CPU write will overwrite current shadow value.
+
+    if(EPwm1Regs.TBSTS.bit.CTRDIR == 1);
 }
 
 //
