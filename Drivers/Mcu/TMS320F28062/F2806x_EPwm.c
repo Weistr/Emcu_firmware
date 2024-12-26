@@ -148,13 +148,13 @@ InitEPwm(void)
     //////////////////////////////////////////////////////////////////////////////////
     // Time-Base Counter Register (TBCTR) 0~FFFF 计数器 见功能模块图
     ////////////////////////////////////////////////////////////////////////////////////
-    EPwm1Regs.TBCTR = 0//计数器清零
+    EPwm1Regs.TBCTR = 0;//计数器清零
 
 
     //////////////////////////////////////////////////////////////////////////////////
     // Time-Base Period Register 0~FFFF 周期计数器 见功能模块图
     ////////////////////////////////////////////////////////////////////////////////////
-    EPwm1Regs.TBPRD = 1000//
+    EPwm1Regs.TBPRD = 1000;//
 
 
     //////////////////////////////////////////////////////////////////////////////////
@@ -162,13 +162,97 @@ InitEPwm(void)
     ////////////////////////////////////////////////////////////////////////////////////
 
 
-    //
+    //比较器B影子寄存器满标志位
     //SHDWBFULL Counter-compare B (CMPB) Shadow Register Full Status Flag
     //This bit self clears once a load-strobe occurs.
     //0 CMPB shadow FIFO not full yet
     //1 Indicates the CMPB shadow FIFO is full; a CPU write will overwrite current shadow value.
+    if(EPwm1Regs.CMPCTL.bit.SHDWBFULL == 1);
+    //比较器A影子寄存器满标志位
+    if(EPwm1Regs.CMPCTL.bit.SHDWAFULL == 1);
 
-    if(EPwm1Regs.TBSTS.bit.CTRDIR == 1);
+
+    //CMPB模式，是否使能影子寄存器
+    //Counter-compare B (CMPB) Register Operating Mode
+    //0 Shadow mode. Operates as a double buffer. All writes via the CPU access the shadow register.
+    //1 Immediate mode. Only the active compare B register is used. All writes and reads directly access 
+    //the active register for immediate compare action.   
+    EPwm1Regs.CMPCTL.bit.SHDWBMODE = 0;
+    //CMPA模式，是否使能影子寄存器  
+    EPwm1Regs.CMPCTL.bit.SHDWAMODE = 0;
+
+
+    //CMPB模式，设置何时装载影子寄存器数值
+    //Active Counter-Compare B (CMPB) Load From Shadow Select Mode
+    //This bit has no effect in immediate mode (CMPCTL[SHDWBMODE] = 1).
+    //00 Load on CTR = Zero: Time-base counter equal to zero (TBCTR = 0x0000)
+    //01 Load on CTR = PRD: Time-base counter equal to period (TBCTR = TBPRD)
+    //10 Load on either CTR = Zero or CTR = PRD
+    //11 Freeze (no loads possible) 
+    EPwm1Regs.CMPCTL.bit.LOADBMODE = 0;
+    //CMPA模式，是否使能影子寄存器  
+    EPwm1Regs.CMPCTL.bit.LOADAMODE = 0;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //CMPB寄存器，向它写默认是向影子寄存器写
+    ////////////////////////////////////////////////////////////////////////////////////
+    EPwm1Regs.CMPB = 0;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //CMPA寄存器，向它写默认是向影子寄存器写
+    ////////////////////////////////////////////////////////////////////////////////////
+    EPwm1Regs.CMPA.all = 0;
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Action-Qualifier Output A Control Register (AQCTLA)动作设置寄存器A
+    ////////////////////////////////////////////////////////////////////////////////////
+    
+    //当向下计数时CTR=CMPB时动作
+    //Action when the time-base counter equals the active CMPB register and the counter is decrementing.
+    //00 Do nothing (action disabled)
+    //01 Clear: force EPWMxA output low.
+    //10 Set: force EPWMxA output high.
+    //11 Toggle EPWMxA output: low output signal will be forced high, and a high signal will be forced low.
+    EPwm1Regs.AQCTLA.bit.CBD = 0;
+    //当向上计数时CTR=CMPB时动作    
+    //Action when the counter equals the active CMPB register and the counter is incrementing.
+    EPwm1Regs.AQCTLA.bit.CBU = 0;
+    //当向下计数时CTR=CMPA时动作
+    EPwm1Regs.AQCTLA.bit.CAD = 0;
+    //当向下计数时CTR=CMPB时动作
+    EPwm1Regs.AQCTLA.bit.CAU = 0;
+    //CTR=PRD时动作
+    //Note: By definition, in count up-down mode when the counter equals period the direction is defined as 0 or 
+    //counting down.
+    EPwm1Regs.AQCTLA.bit.PRD = 0;
+    //CTR=ZRO时动作
+    //Note: By definition, in count up-down mode when the counter equals period the direction is defined as 1 or 
+    //counting down.
+    EPwm1Regs.AQCTLA.bit.ZRO = 0;    
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Action-Qualifier Output B Control Register (AQCTLB)动作设置寄存器B,同A
+    ////////////////////////////////////////////////////////////////////////////////////
+    EPwm1Regs.AQCTLB.bit.CBD = 0;
+    EPwm1Regs.AQCTLB.bit.CBU = 0;
+    EPwm1Regs.AQCTLB.bit.CAD = 0;
+    EPwm1Regs.AQCTLB.bit.CAU = 0;
+    EPwm1Regs.AQCTLB.bit.PRD = 0;
+    EPwm1Regs.AQCTLB.bit.ZRO = 0;  
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Action-Qualifier Software Force Register (AQSFRC)
+    ////////////////////////////////////////////////////////////////////////////////////
+    //
+    //AQCSFRC Active Register Reload From Shadow Options
+    //00 Load on event counter equals zero
+    //01 Load on event counter equals period
+    //10 Load on event counter equals zero or counter equals period
+    //11 Load immediately (the active register is directly accessed by the CPU and is not loaded from the 
+    //shadow register)
+
 }
 
 //
