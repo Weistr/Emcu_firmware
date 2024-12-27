@@ -696,7 +696,38 @@ InitEPwm(void)
     EPwm1Regs.ETFRC.bit.SOCB = 0;
     EPwm1Regs.ETFRC.bit.SOCA = 0;    
     EPwm1Regs.ETFRC.bit.INT = 0;
-    
+
+
+
+
+
+
+
+
+/*
+
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Trip Select (DCTRIPSEL) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // Digital Compare B Low Input Select
+    // Defines the source for the DCBL input. The TZ signals, when used as trip signals, are treated as 
+    // normal inputs and can be defined as active high or active low.
+    // 0000 TZ1 input
+    // 0001 TZ2 input
+    // 0010 TZ3 input
+    // 1000 COMP1OUT input
+    // 1001 COMP2OUT input
+    // 1010 COMP3OUT input
+    EPwm1Regs.DCTRIPSEL.bit.DCBLCOMPSEL = 0;
+    // Digital Compare B high Input Select
+    EPwm1Regs.DCTRIPSEL.bit.DCBHCOMPSEL = 0; 
+    // Digital Compare A high Input Select
+    EPwm1Regs.DCTRIPSEL.bit.DCAHCOMPSEL = 0; 
+    // Digital Compare A low Input Select
+    EPwm1Regs.DCTRIPSEL.bit.DCALCOMPSEL = 0; */
+
+
 }
 
 
