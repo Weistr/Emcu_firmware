@@ -704,8 +704,6 @@ InitEPwm(void)
 
 
 
-/*
-
 
     //////////////////////////////////////////////////////////////////////////////////
     //Digital Compare Trip Select (DCTRIPSEL) Register
@@ -725,9 +723,114 @@ InitEPwm(void)
     // Digital Compare A high Input Select
     EPwm1Regs.DCTRIPSEL.bit.DCAHCOMPSEL = 0; 
     // Digital Compare A low Input Select
-    EPwm1Regs.DCTRIPSEL.bit.DCALCOMPSEL = 0; */
+    EPwm1Regs.DCTRIPSEL.bit.DCALCOMPSEL = 0; 
 
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare A Control (DCACTL) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // DCAEVT2 Force Synchronization Signal Select
+    // 0 Source Is Synchronous Signal
+    // 1 Source Is Asynchronous Signal
+    EPwm1Regs.DCACTL.bit.EVT1FRCSYNCSEL = 0;
+    // DCAEVT2 Source Signal Select
+    // 0 Source Is DCAEVT2 Signal
+    // 1 Source Is DCEVTFILT Signal
+    EPwm1Regs.DCACTL.bit.EVT2SRCSEL = 0;
+    // DCAEVT1 SYNC, Enable/Disable
+    // 0 SYNC Generation Disabled
+    // 1 SYNC Generation Enabled
+    EPwm1Regs.DCACTL.bit.EVT1SYNCE = 0;
+    // DCAEVT1 SOC, Enable/Disable
+    // 0 SOC Generation Disabled
+    // 1 SOC Generation Enabled
+    EPwm1Regs.DCACTL.bit.EVT1SOCE = 0;
+    //同EVT2
+    EPwm1Regs.DCACTL.bit.EVT2FRCSYNCSEL = 0;
+    //同EVT2
+    EPwm1Regs.DCACTL.bit.EVT1SRCSEL = 0;
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare B Control (DCBCTL) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    EPwm1Regs.DCBCTL.bit.EVT1FRCSYNCSEL = 0;
+    EPwm1Regs.DCBCTL.bit.EVT2SRCSEL = 0;
+    EPwm1Regs.DCBCTL.bit.EVT1SYNCE = 0;
+    EPwm1Regs.DCBCTL.bit.EVT1SOCE = 0;
+    EPwm1Regs.DCBCTL.bit.EVT2FRCSYNCSEL = 0;
+    EPwm1Regs.DCBCTL.bit.EVT1SRCSEL = 0;
 
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Filter Control (DCFCTL) Register  
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // Pulse Select For Blanking & Capture Alignment
+    // 00 Time-base counter equal to period (TBCTR = TBPRD)
+    // 01 Time-base counter equal to zero (TBCTR = 0x0000)
+    // 10 Reserved
+    // 11 Reserved    
+    EPwm1Regs.DCFCTL.bit.PULSESEL = 0;
+    // Blanking Window Inversion
+    // 0 Blanking window not inverted
+    // 1 Blanking window inverted    
+    EPwm1Regs.DCFCTL.bit.BLANKINV = 0;
+    // Blanking Window Enable/Disable
+    // 0 Blanking window is disabled
+    // 1 Blanking window is enabled 
+    EPwm1Regs.DCFCTL.bit.BLANKE = 0;
+    //     Filter Block Signal Source Select
+    // 00 Source Is DCAEVT1 Signal
+    // 01 Source Is DCAEVT2 Signal
+    // 10 Source Is DCBEVT1 Signal
+    // 11 Source Is DCBEVT2 Signal   
+    EPwm1Regs.DCFCTL.bit.SRCSEL = 0;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Capture Control (DCCAPCTL) Register 
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // TBCTR Counter Capture Shadow Select Mode
+    // 0 Enable shadow mode. The DCCAP active register is copied to shadow register on a TBCTR = 
+    // TBPRD or TBCTR = zero event as defined by the DCFCTL[PULSESEL] bit. CPU reads of the 
+    // DCCAP register will return the shadow register contents.
+    // 1 Active Mode. In this mode the shadow register is disabled. CPU reads from the DCCAP register will 
+    // always return the active register contents.    
+    EPwm1Regs.DCCAPCTL.bit.SHDWMODE = 0;
+    // TBCTR Counter Capture Enable/Disable
+    // 0 Disable the time-base counter capture.
+    // 1 Enable the time-base counter capture.    
+    EPwm1Regs.DCCAPCTL.bit.CAPE = 0;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Filter Offset (DCFOFFSET) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // Blanking Window Offset
+    // These 16-bits specify the number of TBCLK cycles from the blanking window reference to the 
+    // point when the blanking window is applied. The blanking window reference is either period or 
+    // zero as defined by the DCFCTL[PULSESEL] bit.
+    // This offset register is shadowed and the active register is loaded at the reference point defined 
+    // by DCFCTL[PULSESEL]. The offset counter is also initialized and begins to count down when 
+    // the active register is loaded. When the counter expires, the blanking window is applied. If the 
+    // blanking window is currently active, then the blanking window counter is restarted    
+    if(EPwm1Regs.DCFOFFSET == 100);
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Filter Offset Counter (DCFOFFSETCNT) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    // Blanking Offset Counter
+    // These 16-bits are read only and indicate the current value of the offset counter. The counter 
+    // counts down to zero and then stops until it is re-loaded on the next period or zero event as 
+    // defined by the DCFCTL[PULSESEL] bit.
+    // The offset counter is not affected by the free/soft emulation bits. That is, it will always continue 
+    // to count down if the device is halted by a emulation stop.
+    if(EPwm1Regs.DCFOFFSETCNT == 100);
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Filter Window (DCFWINDOW) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    EPwm1Regs.DCFWINDOW = 0;
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Filter Window Counter (DCFWINDOWCNT) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    if(EPwm1Regs.DCFWINDOWCNT == 0);    
+    //////////////////////////////////////////////////////////////////////////////////
+    //Digital Compare Counter Capture (DCCAP) Register
+    ////////////////////////////////////////////////////////////////////////////////////   
+    if(EPwm1Regs.DCCAP == 0);    
 }
 
 
