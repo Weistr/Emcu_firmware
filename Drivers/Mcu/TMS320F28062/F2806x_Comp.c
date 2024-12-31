@@ -60,6 +60,7 @@ InitComp(void)
     // 0 Asynchronous version of Comparator output is passed
     // 1 Synchronous version of comparator output is passed    
     Comp1Regs.COMPCTL.bit.SYNCSEL = 0;
+    //输出延时多久
     // Qualification Period for synchronized output of the comparator
     // 0h Synchronized value of comparator is passed through
     // 1h Input to the block must be consistent for 2 consecutive clocks before output of Qual block can 
@@ -69,6 +70,62 @@ InitComp(void)
     // ... ...
     // 1Fh Input to the block must be consistent for 32 consecutive clocks before output of Qual block can    
     Comp1Regs.COMPCTL.bit.QUALSEL = 0;
+    //1:反相输出
+    Comp1Regs.COMPCTL.bit.CMPINV = 0;
+    //0:输入选择DAC,1:输入选择IO口
+    Comp1Regs.COMPCTL.bit.COMPSOURCE = 0;
+    //1:使能comp DAC
+    Comp1Regs.COMPCTL.bit.COMPDACEN = 0;
+
+//////////////////////////////////////////////////////////////////////////////////
+// Compare Output Status (COMPSTS) Register
+////////////////////////////////////////////////////////////////////////////////////
+    if(Comp1Regs.COMPSTS.bit.COMPSTS == 1);
+
+//////////////////////////////////////////////////////////////////////////////////
+// DAC Control (DACCTL) Register
+////////////////////////////////////////////////////////////////////////////////////
+    //仿真时是否暂停斜坡发生器
+    Comp1Regs.DACCTL.bit.FREE_SOFT = 0;
+    // HRPCTL[PWMSYNCSEL].
+    // 0h PWMSYNC1 is the source sync
+    // 1h PWMSYNC2 is the source sync
+    // 2h PWMSYNC3 is the source sync
+    // ... ...
+    // n-1 PWMSYNCn is the source sync    
+    Comp1Regs.DACCTL.bit.RAMPSOURCE = 0;
+    // DAC source control. Select DACVAL or ramp generator to control the DAC.
+    // 0 DAC controlled by DACVAL
+    // 1 DAC controlled by ramp generator
+    Comp1Regs.DACCTL.bit.DACSOURCE = 0;
+    //DAC Value (DACVAL) Register
+    Comp1Regs.DACVAL.bit.DACVAL = 0;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Ramp Generator Maximum Reference Active (RAMPMAXREF_ACTIVE) Register
+    ////////////////////////////////////////////////////////////////////////////////////
+    //16-bit maximum reference active value for down ramp generator.
+    //This value is loaded from RAMPMAXREF_SHDW when the PWMSYNC signal is received.
+    if(Comp1Regs.RAMPMAXREF_ACTIVE == 100);
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Ramp Generator Maximum Reference Shadow (RAMPMAXREF_SHDW) Register
+    ////////////////////////////////////////////////////////////////////////////////////
+    Comp1Regs.RAMPMAXREF_SHDW = 100;
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Ramp Generator Decrement Value Active (RAMPDECVAL_ACTIVE) Register
+    ////////////////////////////////////////////////////////////////////////////////////
+    // 16-bit decrement active value for down ramp generator.
+    // This value is loaded from RAMPDECVAL_SHDW when the PWMSYNC signal is received.
+    if(Comp1Regs.RAMPDECVAL_ACTIVE == 100);
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // Ramp Generator Status (RAMPSTS) Register
+    ////////////////////////////////////////////////////////////////////////////////////
+    if(Comp1Regs.RAMPSTS == 0);
+
+
 
 }
 
