@@ -1,12 +1,8 @@
 #include "main.h"
 #include "task.h"
 #include "board.h"
-
-
 void main()
 {
-
-
     boardInit();
 
 
