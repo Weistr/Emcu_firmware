@@ -7,6 +7,7 @@
 
 #ifndef BOARD_H_
 #define BOARD_H_
+
 #include "F2837xS_Cla_typedefs.h"// F2806x CLA Type definitions
 #include "F2837xS_device.h"      // F2806x Headerfile Include File
 #include "F2837xS_Examples.h"    // F2806x Examples Include File
