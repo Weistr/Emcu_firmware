@@ -516,6 +516,33 @@ void GPIO_WritePin(Uint16 pin, Uint16 outVal)
     }
 }
 
+void gpioConfig()
+{
+
+    InitGpio();
+    EALLOW;
+    GPIO_SetupPinMux(88, GPIO_MUX_CPU1, 0);
+    GPIO_SetupPinOptions(88, GPIO_OUTPUT, GPIO_PUSHPULL);
+
+     //epwm
+     //
+     // Disable internal pull-up for the selected output pins
+     // for reduced power consumption
+     // Pull-ups can be enabled or disabled by the user.
+     // Comment out other unwanted lines.
+     //
+     GpioCtrlRegs.GPEPUD.bit.GPIO145 = 1;    // Disable pull-up on GPIO145 (EPWM1A)
+     GpioCtrlRegs.GPEPUD.bit.GPIO146 = 1;    // Disable pull-up on GPIO146 (EPWM1B)
+     //
+     // Configure EPWM-1 pins using GPIO regs
+     // This specifies which of the possible GPIO pins will be EPWM1 functional
+     // pins.
+     // Comment out other unwanted lines.
+     //
+     GpioCtrlRegs.GPEMUX2.bit.GPIO145 = 1;   // Configure GPIO145 as EPWM1A
+     GpioCtrlRegs.GPEMUX2.bit.GPIO146 = 1;   // Configure GPIO0146 as EPWM1B
+    EDIS;
+}
 //
 // End of file
 //

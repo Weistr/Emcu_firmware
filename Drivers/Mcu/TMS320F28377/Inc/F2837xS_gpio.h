@@ -3870,6 +3870,7 @@ extern volatile struct GPIO_DATA_REGS GpioDataRegs;
 }
 #endif                                  /* extern "C" */
 
+void gpioConfig();
 #endif
 
 //===========================================================================
