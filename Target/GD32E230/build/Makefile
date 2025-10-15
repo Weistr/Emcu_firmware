@@ -56,17 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = C:\Users\86133\Documents\Project\EMCU\Emcu_firmware
+CMAKE_SOURCE_DIR = C:\Users\86133\Documents\Project\BMS1\firmware\Emcu_firmware
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build
-=======
-CMAKE_SOURCE_DIR = C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
+CMAKE_BINARY_DIR = C:\Users\86133\Documents\Project\BMS1\firmware\Emcu_firmware\Target\GD32E230\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -93,15 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\CMakeFiles C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\BMS1\firmware\Emcu_firmware\Target\GD32E230\build\CMakeFiles C:\Users\86133\Documents\Project\BMS1\firmware\Emcu_firmware\Target\GD32E230\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\Target\GD32E230\build\CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\CMakeFiles C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\test\temp1\Emcu_firmware\Target\GD32E230\build\CMakeFiles 0
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86133\Documents\Project\BMS1\firmware\Emcu_firmware\Target\GD32E230\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -629,6 +616,30 @@ Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/gd32e23x_wwdgt.c.s
 .PHONY : Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/gd32e23x_wwdgt.c.s
 
+Drivers/Mcu/GD32E230/board.obj: Drivers/Mcu/GD32E230/board.c.obj
+.PHONY : Drivers/Mcu/GD32E230/board.obj
+
+# target to build an object file
+Drivers/Mcu/GD32E230/board.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32E230/board.c.obj
+.PHONY : Drivers/Mcu/GD32E230/board.c.obj
+
+Drivers/Mcu/GD32E230/board.i: Drivers/Mcu/GD32E230/board.c.i
+.PHONY : Drivers/Mcu/GD32E230/board.i
+
+# target to preprocess a source file
+Drivers/Mcu/GD32E230/board.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32E230/board.c.i
+.PHONY : Drivers/Mcu/GD32E230/board.c.i
+
+Drivers/Mcu/GD32E230/board.s: Drivers/Mcu/GD32E230/board.c.s
+.PHONY : Drivers/Mcu/GD32E230/board.s
+
+# target to generate assembly for a file
+Drivers/Mcu/GD32E230/board.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32E230/board.c.s
+.PHONY : Drivers/Mcu/GD32E230/board.c.s
+
 Drivers/Mcu/GD32E230/gd32e23x_it.obj: Drivers/Mcu/GD32E230/gd32e23x_it.c.obj
 .PHONY : Drivers/Mcu/GD32E230/gd32e23x_it.obj
 
@@ -652,30 +663,6 @@ Drivers/Mcu/GD32E230/gd32e23x_it.s: Drivers/Mcu/GD32E230/gd32e23x_it.c.s
 Drivers/Mcu/GD32E230/gd32e23x_it.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Drivers/Mcu/GD32E230/gd32e23x_it.c.s
 .PHONY : Drivers/Mcu/GD32E230/gd32e23x_it.c.s
-
-Target/GD32E230/board.obj: Target/GD32E230/board.c.obj
-.PHONY : Target/GD32E230/board.obj
-
-# target to build an object file
-Target/GD32E230/board.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/board.c.obj
-.PHONY : Target/GD32E230/board.c.obj
-
-Target/GD32E230/board.i: Target/GD32E230/board.c.i
-.PHONY : Target/GD32E230/board.i
-
-# target to preprocess a source file
-Target/GD32E230/board.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/board.c.i
-.PHONY : Target/GD32E230/board.c.i
-
-Target/GD32E230/board.s: Target/GD32E230/board.c.s
-.PHONY : Target/GD32E230/board.s
-
-# target to generate assembly for a file
-Target/GD32E230/board.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/board.c.s
-.PHONY : Target/GD32E230/board.c.s
 
 UserApp/main.obj: UserApp/main.c.obj
 .PHONY : UserApp/main.obj
@@ -795,12 +782,12 @@ help:
 	@echo ... Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/gd32e23x_wwdgt.obj
 	@echo ... Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/gd32e23x_wwdgt.i
 	@echo ... Drivers/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/gd32e23x_wwdgt.s
+	@echo ... Drivers/Mcu/GD32E230/board.obj
+	@echo ... Drivers/Mcu/GD32E230/board.i
+	@echo ... Drivers/Mcu/GD32E230/board.s
 	@echo ... Drivers/Mcu/GD32E230/gd32e23x_it.obj
 	@echo ... Drivers/Mcu/GD32E230/gd32e23x_it.i
 	@echo ... Drivers/Mcu/GD32E230/gd32e23x_it.s
-	@echo ... Target/GD32E230/board.obj
-	@echo ... Target/GD32E230/board.i
-	@echo ... Target/GD32E230/board.s
 	@echo ... UserApp/main.obj
 	@echo ... UserApp/main.i
 	@echo ... UserApp/main.s

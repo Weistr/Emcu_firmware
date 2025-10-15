@@ -10,7 +10,11 @@
         "gpio.h": "c",
         "board.h": "c",
         "gd32e23x.h": "c",
-        "f2837xs_device.h": "c"
+        "f2837xs_device.h": "c",
+        "core_cm23.h": "c",
+        "cmsis_compiler.h": "c",
+        "system_gd32e23x.h": "c",
+        "stdint.h": "c"
     },
     "cortex-debug.openocdPath": "C:\\developer_tools\\EmbeddedBuilder_v1.4.1.23782\\EmbeddedBuilder_v1.4.1.23782\\Tools\\OpenOCD\\xpack-openocd-0.11.0-3\\bin\\openocd.exe"
 }
