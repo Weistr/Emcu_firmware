@@ -6,7 +6,6 @@
 //PC13:LED
 void gpioConfig(void)
 {
-<<<<<<< HEAD
     rcu_periph_clock_enable(RCU_GPIOA);
     gpio_mode_set(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_3);
     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_3);
@@ -15,10 +14,6 @@ void gpioConfig(void)
     gpio_mode_set(GPIOA, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_1);
 
 
-=======
-    gpio_mode_set(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_13);
-    gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_13);
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
 }
 
 void systick_config(void)
@@ -36,7 +31,6 @@ void boardApp()
 {
     static bool flag = 0;
     flag =! flag;
-<<<<<<< HEAD
     
     if (flag)
     {
@@ -51,18 +45,6 @@ void boardApp()
     
 
 }
-=======
-    if (flag)
-    {
-        gpio_bit_reset(GPIOC, GPIO_PIN_13);  //PC13置0
-    }
-    else
-    {
-        gpio_bit_set(GPIOC, GPIO_PIN_13);  //PC13置0
-    }    
-}
-
->>>>>>> 916220da26544e668caddbb8146b792c7aeed91d
 void boardInit(void)
 {
     systick_config();
