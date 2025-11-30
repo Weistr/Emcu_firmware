@@ -1,2 +1,5 @@
-2025/09/12-15:12:04.814 81c0 Creating DB C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\CCS\.jxbrowser.userdata\Default\Site Characteristics Database since it was missing.
-2025/09/12-15:12:04.827 81c0 Reusing MANIFEST C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\CCS\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001
+2025/11/15-14:16:23.656 7934 Log #3: 9 ops saved to Table #4 OK
+2025/11/15-14:16:23.659 7934 Archiving C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\CCSWORKSPACE\.jxbrowser.userdata\Default\Site Characteristics Database/000003.log: OK
+2025/11/15-14:16:23.659 7934 Table #4: 9 entries OK
+2025/11/15-14:16:23.666 7934 Archiving C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\CCSWORKSPACE\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001: OK
+2025/11/15-14:16:23.687 7934 **** Repaired leveldb C:\Users\86133\Documents\Project\EMCU\Emcu_firmware\CCSWORKSPACE\.jxbrowser.userdata\Default\Site Characteristics Database; recovered 1 files; 314 bytes. Some data may have been lost. ****
