@@ -191,8 +191,8 @@ void timerConfig(void)
     /* 配置通道 2 输出比较模式为 PWM 模式 0 */
     timer_channel_output_mode_config(TIMER2, TIMER_CH_1, TIMER_OC_MODE_PWM0);
     
-    /* 配置通道 2 PWM 脉冲值 (占空比: 50%) */
-    timer_channel_output_pulse_value_config(TIMER2, TIMER_CH_1, 500);
+    /* 配置通道 2 PWM 脉冲值 (占空比: 0%) */
+    timer_channel_output_pulse_value_config(TIMER2, TIMER_CH_1, 0);
     
     /* 配置通道 2 输出影子功能 */
     timer_channel_output_shadow_config(TIMER2, TIMER_CH_1, TIMER_OC_SHADOW_DISABLE);

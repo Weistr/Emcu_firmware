@@ -4,6 +4,9 @@
 #include "gd32e23x_usart.h"
 #include "stdbool.h"
 
+
+
+
 #define usart0TxBufferSize 8
 #define usart0RxBufferSize 8
 #define ARRAYNUM(arr_nanme)      (uint32_t)(sizeof(arr_nanme) / sizeof(*(arr_nanme)))
@@ -69,4 +72,9 @@ extern uint8_t usart0TxBuffer[usart0TxBufferSize];
 extern uint8_t usart0RxBuffer[usart0RxBufferSize];
 extern usart_interrupt_flagSta_Typedef usart0_interrupt_flagSta;
 extern usart_flagSta_Typedef usart0_flagSta;
+
+
+//实现uartCmd中的内容
+
+
 #endif /* MAIN_H */

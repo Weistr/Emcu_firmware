@@ -25,8 +25,10 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/Lib/Src/Device/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Include
     ${PROJECT_SOURCE_DIR}/Lib/Src/Device/Mcu/GD32E230/Inc
     ${PROJECT_SOURCE_DIR}/Lib/Src/Device/LED
+    ${PROJECT_SOURCE_DIR}/Lib/Src/Device/Buzzer
     ${PROJECT_SOURCE_DIR}/Lib/Src/Task
     ${PROJECT_SOURCE_DIR}/Lib/Src/Delay
+    ${PROJECT_SOURCE_DIR}/Lib/Src/UartCmd
     ${PROJECT_SOURCE_DIR}/Target/GD32E230/Src/App/Inc
     ${PROJECT_SOURCE_DIR}/Target/GD32E230/Src/HwConfig/Inc
 
@@ -39,9 +41,8 @@ file(GLOB_RECURSE SOURCES
     "${PROJECT_SOURCE_DIR}/Lib/Src/Device/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/CMSIS/GD/GD32E23x/Source/*.c"
     "${PROJECT_SOURCE_DIR}/Lib/Src/Device/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Source/*.c"
     "${PROJECT_SOURCE_DIR}/Lib/Src/Device/Mcu/GD32E230/*.c"
-    "${PROJECT_SOURCE_DIR}/Lib/Src/Device/LED/*.c"
-    "${PROJECT_SOURCE_DIR}/Lib/Src/Task/*.c"
-    "${PROJECT_SOURCE_DIR}/Lib/Src/Delay/*.c"    
+    "${PROJECT_SOURCE_DIR}/Lib/Src/Device/**/*.c"
+    "${PROJECT_SOURCE_DIR}/Lib/Src/**/*.c"  
     "${PROJECT_SOURCE_DIR}/Target/GD32E230/Src/*.c"
     "${PROJECT_SOURCE_DIR}/Target/GD32E230/Src/**/*.c"
     "${PROJECT_SOURCE_DIR}/Target/GD32E230/Src/HwConfig/*.c"

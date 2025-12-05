@@ -2,11 +2,12 @@
 #include <stddef.h>  // 添加 NULL 定义
 #include "dma.h"
 #include "main.h"
-uint8_t USART0_FLAG_BSY = 0;
-uint8_t USART0_INT_FLAG_IDLE = 0;
+#include "uartCmd.h"
+static bool firstSend = 0;//跳过第一次发送，初始化后会发送一个测试帧
+extern uint8_t uartCmdBuffer_send[uartCmdBuffer_send_size];
+extern uint8_t uartCmdBuffer_rcv[uartCmdBuffer_rcv_size];
 
-
-uint8_t usart0TxBuffer[usart0TxBufferSize] = {0,1,2,3};
+//uint8_t usart0TxBuffer[usart0TxBufferSize] = {0,1,2,3};
 uint8_t usart0RxBuffer[usart0RxBufferSize] = {0};
 
 
@@ -208,9 +209,9 @@ void uartConfig()
     //读取FIFO中数据数目
     //fifo.num = usart_receive_fifo_counter_number(USART0);
     //读取标志位
-    USART0_FLAG_BSY = usart_flag_get(USART0,USART_FLAG_BSY);
+    //USART0_FLAG_BSY = usart_flag_get(USART0,USART_FLAG_BSY);
     //清除标志位
-    usart_flag_get(USART0,USART_FLAG_RT);
+    //usart_flag_clear(USART0,USART_FLAG_RT);
 
     // USART_INT_IDLE: idle interrupt
     //USART_INT_RBNE: 当接收到一个数据帧，USART_STAT寄存器中的RBNE置位,对USART_RDATA寄存器的一个读操作都可以清除RBNE位,包括DMA
@@ -246,6 +247,7 @@ void uartConfig()
 
     //使能串口中断
     nvic_irq_enable(USART0_IRQn, 2);
+    firstSend = 0;
 }
 
 
@@ -269,7 +271,8 @@ void usart_dma_tx_send(uint32_t usartx,uint8_t* txbuffer,uint16_t txlen)
     usart_dma_transmit_config(usartx,USART_DENT_ENABLE);
 }
 
-
+extern void uart_send_finish_handle(void);
+extern void uart_recive_finish_handle(void);
 void USART0_IRQHandler(void)
 {
     usartx_readAll_interrupt_flagSta(USART0,&usart0_interrupt_flagSta);
@@ -278,11 +281,31 @@ void USART0_IRQHandler(void)
     if(usart0_interrupt_flagSta.USART_INT_FLAG_RT == 1)
     {
         usart_interrupt_flag_clear(USART0,USART_INT_FLAG_RT);
-        debval[3] = dma_transfer_number_get(DMA_CH_USART0_RX);
+        uart_recive_finish_handle();
     }
     else if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_TC)){
         /* transmit data */
         usart_interrupt_flag_clear(USART0,USART_INT_FLAG_TC);
         
+        if (firstSend == 0)
+        {
+            firstSend = 1;//跳过第一次发送，初始化后会发送一个测试帧
+        }
+        else
+        {
+            uart_send_finish_handle();
+        }
     }
+}
+
+//实现uartCmd中的函数
+void uartCmd_send(uint8_t* chr,uint16_t num)
+{
+    usart_dma_tx_send(USART0,chr,num);
+}
+
+
+uint16_t uartCmd_rcv_nums(void)
+{
+    return dma_transfer_number_get(DMA_CH_USART0_RX);
 }

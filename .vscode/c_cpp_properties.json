@@ -26,9 +26,9 @@
                 "${workspaceFolder}/Lib/Src/Device/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/CMSIS/GD/GD32E23x/Include", 
                 "${workspaceFolder}/Lib/Src/Device/Mcu/GD32E230/GD32E23x_Firmware_Library_V210/GD32E23x_standard_peripheral/Include",   
                 "${workspaceFolder}/Target/GD32E230/Src/**",
-                "${workspaceFolder}/Lib/Src/Device/LED/**",
-                "${workspaceFolder}/Lib/Src/Task/**",
-                "${workspaceFolder}/Lib/Src/Delay/**"
+                "${workspaceFolder}/Lib/Src/Device/**",
+                "${workspaceFolder}/Lib/Src/Device/**",
+                "${workspaceFolder}/Lib/Src/**"
 
 
             ],

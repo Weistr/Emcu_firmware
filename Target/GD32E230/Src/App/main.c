@@ -6,21 +6,20 @@
 #include "cmsis_delay.h"
 #include "adc.h"
 #include "dma.h"
+#include "uartCmd.h"
 #include "uart.h"
 #include "timer.h"
+#include "buzzer.h"
 uint32_t debval[8];
 void basicTask()
 {
     led_sta_update_20ms();
-    //debval[0] = adc_transform_softWare();
-
-    //usart_dma_tx_send(USART0,usart0TxBuffer,3);
-    debval[1] = timer_counter_read(TIMER2);
-    debval[2] = timer_flag_get(TIMER2, TIMER_FLAG_CH1);
-    //timer_flag_clear(TIMER2, TIMER_FLAG_CH1);
-    usartx_readAll_interrupt_flagSta(USART0,&usart0_interrupt_flagSta);
-    usartx_readAll_flagSta(USART0,&usart0_flagSta);
-    timer_channel_output_pulse_value_config(TIMER2, TIMER_CH_1, debval[4]);
+    buzzerTask_20ms();
+    if (debval[2])
+    {
+        debval[2] = 0;
+        uartCmd_send("0123",5);
+    }
     
 }
 

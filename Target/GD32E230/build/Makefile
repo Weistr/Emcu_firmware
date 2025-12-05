@@ -152,6 +152,30 @@ Lib/Src/Delay/cmsis_delay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Delay/cmsis_delay.c.s
 .PHONY : Lib/Src/Delay/cmsis_delay.c.s
 
+Lib/Src/Device/Buzzer/buzzer.obj: Lib/Src/Device/Buzzer/buzzer.c.obj
+.PHONY : Lib/Src/Device/Buzzer/buzzer.obj
+
+# target to build an object file
+Lib/Src/Device/Buzzer/buzzer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Device/Buzzer/buzzer.c.obj
+.PHONY : Lib/Src/Device/Buzzer/buzzer.c.obj
+
+Lib/Src/Device/Buzzer/buzzer.i: Lib/Src/Device/Buzzer/buzzer.c.i
+.PHONY : Lib/Src/Device/Buzzer/buzzer.i
+
+# target to preprocess a source file
+Lib/Src/Device/Buzzer/buzzer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Device/Buzzer/buzzer.c.i
+.PHONY : Lib/Src/Device/Buzzer/buzzer.c.i
+
+Lib/Src/Device/Buzzer/buzzer.s: Lib/Src/Device/Buzzer/buzzer.c.s
+.PHONY : Lib/Src/Device/Buzzer/buzzer.s
+
+# target to generate assembly for a file
+Lib/Src/Device/Buzzer/buzzer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Device/Buzzer/buzzer.c.s
+.PHONY : Lib/Src/Device/Buzzer/buzzer.c.s
+
 Lib/Src/Device/LED/led.obj: Lib/Src/Device/LED/led.c.obj
 .PHONY : Lib/Src/Device/LED/led.obj
 
@@ -712,6 +736,54 @@ Lib/Src/Task/task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Task/task.c.s
 .PHONY : Lib/Src/Task/task.c.s
 
+Lib/Src/UartCmd/crc.obj: Lib/Src/UartCmd/crc.c.obj
+.PHONY : Lib/Src/UartCmd/crc.obj
+
+# target to build an object file
+Lib/Src/UartCmd/crc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/crc.c.obj
+.PHONY : Lib/Src/UartCmd/crc.c.obj
+
+Lib/Src/UartCmd/crc.i: Lib/Src/UartCmd/crc.c.i
+.PHONY : Lib/Src/UartCmd/crc.i
+
+# target to preprocess a source file
+Lib/Src/UartCmd/crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/crc.c.i
+.PHONY : Lib/Src/UartCmd/crc.c.i
+
+Lib/Src/UartCmd/crc.s: Lib/Src/UartCmd/crc.c.s
+.PHONY : Lib/Src/UartCmd/crc.s
+
+# target to generate assembly for a file
+Lib/Src/UartCmd/crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/crc.c.s
+.PHONY : Lib/Src/UartCmd/crc.c.s
+
+Lib/Src/UartCmd/uartCmd.obj: Lib/Src/UartCmd/uartCmd.c.obj
+.PHONY : Lib/Src/UartCmd/uartCmd.obj
+
+# target to build an object file
+Lib/Src/UartCmd/uartCmd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/uartCmd.c.obj
+.PHONY : Lib/Src/UartCmd/uartCmd.c.obj
+
+Lib/Src/UartCmd/uartCmd.i: Lib/Src/UartCmd/uartCmd.c.i
+.PHONY : Lib/Src/UartCmd/uartCmd.i
+
+# target to preprocess a source file
+Lib/Src/UartCmd/uartCmd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/uartCmd.c.i
+.PHONY : Lib/Src/UartCmd/uartCmd.c.i
+
+Lib/Src/UartCmd/uartCmd.s: Lib/Src/UartCmd/uartCmd.c.s
+.PHONY : Lib/Src/UartCmd/uartCmd.s
+
+# target to generate assembly for a file
+Lib/Src/UartCmd/uartCmd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/uartCmd.c.s
+.PHONY : Lib/Src/UartCmd/uartCmd.c.s
+
 Target/GD32E230/Src/App/main.obj: Target/GD32E230/Src/App/main.c.obj
 .PHONY : Target/GD32E230/Src/App/main.obj
 
@@ -916,6 +988,9 @@ help:
 	@echo ... Lib/Src/Delay/cmsis_delay.obj
 	@echo ... Lib/Src/Delay/cmsis_delay.i
 	@echo ... Lib/Src/Delay/cmsis_delay.s
+	@echo ... Lib/Src/Device/Buzzer/buzzer.obj
+	@echo ... Lib/Src/Device/Buzzer/buzzer.i
+	@echo ... Lib/Src/Device/Buzzer/buzzer.s
 	@echo ... Lib/Src/Device/LED/led.obj
 	@echo ... Lib/Src/Device/LED/led.i
 	@echo ... Lib/Src/Device/LED/led.s
@@ -986,6 +1061,12 @@ help:
 	@echo ... Lib/Src/Task/task.obj
 	@echo ... Lib/Src/Task/task.i
 	@echo ... Lib/Src/Task/task.s
+	@echo ... Lib/Src/UartCmd/crc.obj
+	@echo ... Lib/Src/UartCmd/crc.i
+	@echo ... Lib/Src/UartCmd/crc.s
+	@echo ... Lib/Src/UartCmd/uartCmd.obj
+	@echo ... Lib/Src/UartCmd/uartCmd.i
+	@echo ... Lib/Src/UartCmd/uartCmd.s
 	@echo ... Target/GD32E230/Src/App/main.obj
 	@echo ... Target/GD32E230/Src/App/main.i
 	@echo ... Target/GD32E230/Src/App/main.s
