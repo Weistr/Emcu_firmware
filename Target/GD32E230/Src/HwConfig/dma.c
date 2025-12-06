@@ -2,8 +2,8 @@
 #include "adc.h"
 #include "uart.h"
 #include "uartCmd.h"
-extern uint8_t uartCmdBuffer_send[uartCmdBuffer_send_size];
-extern uint8_t uartCmdBuffer_rcv[uartCmdBuffer_rcv_size];
+extern uint8_t uartCmdBuffer_send[UARTCMD_BUFFER_SEND_SIZE];
+extern uint8_t uartCmdBuffer_rcv[UARTCMD_BUFFER_RCV_SIZE];
 
 
 void dmaConfig()
@@ -33,7 +33,7 @@ void dmaConfig()
     dmaConfigParm.memory_addr = (uint32_t)uartCmdBuffer_send;
     dmaConfigParm.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
     dmaConfigParm.memory_width = DMA_MEMORY_WIDTH_8BIT;
-    dmaConfigParm.number = uartCmdBuffer_send_size;
+    dmaConfigParm.number = UARTCMD_BUFFER_SEND_SIZE;
     dmaConfigParm.periph_addr = USART0_TDATA_ADDRESS;
     dmaConfigParm.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
     dmaConfigParm.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
@@ -51,7 +51,7 @@ void dmaConfig()
     dmaConfigParm.memory_addr = (uint32_t)uartCmdBuffer_rcv;
     dmaConfigParm.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
     dmaConfigParm.memory_width = DMA_MEMORY_WIDTH_8BIT;
-    dmaConfigParm.number = uartCmdBuffer_rcv_size;
+    dmaConfigParm.number = UARTCMD_BUFFER_RCV_SIZE;
     dmaConfigParm.periph_addr = USART0_RDATA_ADDRESS;
     dmaConfigParm.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
     dmaConfigParm.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
@@ -62,4 +62,11 @@ void dmaConfig()
     dma_memory_to_memory_disable(DMA_CH_USART0_RX);
 
     dma_channel_enable(DMA_CH_USART0_RX);
+}
+
+void dmaCnt_reset(dma_channel_enum channelx,uint32_t DMA_CHCNT_VALUE)
+{
+    dma_channel_disable(channelx);
+    DMA_CHCNT(channelx) = DMA_CHCNT_VALUE;
+    dma_channel_enable(channelx);
 }

@@ -36,7 +36,7 @@ void adcConfig()
     //该位从‘0’变成‘1’将在稳定时间结束后唤醒ADC。
     //当该位被置位以后，不改变寄存器的其他位仅仅对该位写‘1’， 将开启转换。    
     adc_enable();
-    cmsis_delay_ms(5);
+    cmsis_blocked_delay_ms(5);
     //校准ADC
     adc_calibration_enable();
     //使能ADC中断

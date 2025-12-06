@@ -3,9 +3,10 @@
 #include "dma.h"
 #include "main.h"
 #include "uartCmd.h"
+#include <string.h>
 static bool firstSend = 0;//跳过第一次发送，初始化后会发送一个测试帧
-extern uint8_t uartCmdBuffer_send[uartCmdBuffer_send_size];
-extern uint8_t uartCmdBuffer_rcv[uartCmdBuffer_rcv_size];
+extern uint8_t uartCmdBuffer_send[UARTCMD_BUFFER_SEND_SIZE];
+extern uint8_t uartCmdBuffer_rcv[UARTCMD_BUFFER_RCV_SIZE];
 
 //uint8_t usart0TxBuffer[usart0TxBufferSize] = {0,1,2,3};
 uint8_t usart0RxBuffer[usart0RxBufferSize] = {0};
@@ -281,7 +282,16 @@ void USART0_IRQHandler(void)
     if(usart0_interrupt_flagSta.USART_INT_FLAG_RT == 1)
     {
         usart_interrupt_flag_clear(USART0,USART_INT_FLAG_RT);
-        uart_recive_finish_handle();
+        if(dma_interrupt_flag_get(DMA_CH_USART0_RX,DMA_INT_FLAG_FTF) == SET)//传输错误
+        {
+
+        }
+        else
+        {
+            uart_recive_finish_handle();
+            dmaCnt_reset(DMA_CH_USART0_RX,UARTCMD_BUFFER_RCV_SIZE);//重新接收数据
+            memset(uartCmdBuffer_rcv, 0, UARTCMD_BUFFER_RCV_SIZE);//清空缓存区
+        }
     }
     else if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_TC)){
         /* transmit data */
@@ -299,13 +309,15 @@ void USART0_IRQHandler(void)
 }
 
 //实现uartCmd中的函数
+
+//发送数据
 void uartCmd_send(uint8_t* chr,uint16_t num)
 {
     usart_dma_tx_send(USART0,chr,num);
 }
 
-
+//读取收到的数据的字节数
 uint16_t uartCmd_rcv_nums(void)
 {
-    return dma_transfer_number_get(DMA_CH_USART0_RX);
+    return UARTCMD_BUFFER_RCV_SIZE - dma_transfer_number_get(DMA_CH_USART0_RX);
 }

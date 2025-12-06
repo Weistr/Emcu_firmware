@@ -4,13 +4,13 @@
 uint8_t fac_us = 0;
 uint32_t fac_ms = 0;
 
-void cmsis_delay_init(void)
+void cmsis_blocked_delay_init(void)
 {
     fac_us = SystemCoreClock / 1000000;
     fac_ms = SystemCoreClock / 1000;
 }
 
-void cmsis_delay_us(uint16_t nus)
+void cmsis_blocked_delay_us(uint16_t nus)
 {
     uint32_t ticks = 0;
     uint32_t told = 0;
@@ -42,7 +42,7 @@ void cmsis_delay_us(uint16_t nus)
     }
 }
 
-void cmsis_delay_ms(uint16_t nms)
+void cmsis_blocked_delay_ms(uint16_t nms)
 {
     uint32_t ticks = 0;
     uint32_t told = 0;

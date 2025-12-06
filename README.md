@@ -13,11 +13,15 @@ ccs选择CCSWORKSPACE,从Target/TMS320Fxx导入project
 # gd32e230配置
 选择c_cpp_properties.json, 右下角选择gd32e230, 在includePath头文件选择自己电脑编译器路径
 
-编译方法：
+编译方法（windows）：
 根目录：
-cmake --preset GD32E230初始化
+
+cmake --preset GD32E230 -B Target/GD32E230/build --fresh
+
 cmake --build --preset GD32E230构建
-cmake --build --preset GD32E230 --clean-first
+
+
+
 旧方法：进入build文件夹执行：cmake -G 'MinGW Makefiles' ..\..\..   再执行mingw32-make
 
 GD32e23x时钟选择：见rcu.h
