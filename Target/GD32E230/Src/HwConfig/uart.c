@@ -4,6 +4,7 @@
 #include "main.h"
 #include "uartCmd.h"
 #include <string.h>
+#include "cmsis_delay.h"
 static bool firstSend = 0;//跳过第一次发送，初始化后会发送一个测试帧
 extern uint8_t uartCmdBuffer_send[UARTCMD_BUFFER_SEND_SIZE];
 extern uint8_t uartCmdBuffer_rcv[UARTCMD_BUFFER_RCV_SIZE];
@@ -89,7 +90,7 @@ void uartConfig()
 {
     rcu_periph_clock_enable(RCU_USART0);
     usart_deinit(USART0);
-    usart_baudrate_set(USART0,115200);
+    usart_baudrate_set(USART0,9600);
     //奇偶校验：无
     usart_parity_config(USART0,USART_PM_NONE);
     //数据宽度：8bit
@@ -109,7 +110,7 @@ void uartConfig()
     usart_receiver_timeout_enable(USART0);
     //
     //标准模式下，如果在最后一个字节接收后，在RT规定的时长内(n个波特时钟的时长)，没有检测到新的起始位， RTF标志被置位。
-    usart_receiver_timeout_threshold_config(USART0,96000);//9600下10个字节
+    usart_receiver_timeout_threshold_config(USART0,40);//40/9600bps 5个字节
     //配置USART节点地址
     //在多处理器通信并且静默模式或者深度睡眠模式期间，这些位用来唤醒进行地址匹配
     //的检测。接收到的最高位为1的数据帧将和这些位进行比较。当ADDM位被清零时，
@@ -291,6 +292,7 @@ void USART0_IRQHandler(void)
             uart_recive_finish_handle();
             dmaCnt_reset(DMA_CH_USART0_RX,UARTCMD_BUFFER_RCV_SIZE);//重新接收数据
             memset(uartCmdBuffer_rcv, 0, UARTCMD_BUFFER_RCV_SIZE);//清空缓存区
+            cmsis_blocked_delay_us(10);
         }
     }
     else if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_TC)){

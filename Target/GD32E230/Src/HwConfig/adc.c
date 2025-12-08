@@ -21,9 +21,10 @@ void adcConfig()
     //常规序列配置(E230只有常规序列)，扫描模式；设置一个序列总共几个通道转换
     adc_channel_length_config(ADC_REGULAR_CHANNEL,3);
     //设置转换顺序
-    adc_regular_channel_config(0,I_LEAK_ADC_CHANNEL,ADC_SAMPLETIME_71POINT5);
-    adc_regular_channel_config(1,ACIN_I_ADC_CHANNEL,ADC_SAMPLETIME_71POINT5);
-    adc_regular_channel_config(2,ACIN_ADC_CHANNEL,ADC_SAMPLETIME_71POINT5);
+    adc_regular_channel_config(0,I_LEAK_ADC_CHANNEL,ADC_SAMPLETIME_239POINT5);
+    adc_regular_channel_config(1,ACIN_I_ADC_CHANNEL,ADC_SAMPLETIME_239POINT5);
+    adc_regular_channel_config(2,ACIN_ADC_CHANNEL,ADC_SAMPLETIME_239POINT5);
+
     //使能/失能ADC外部触发
     adc_external_trigger_config(ADC_REGULAR_CHANNEL,DISABLE);
     //选择外部触发源
@@ -64,8 +65,11 @@ uint16_t adc_transform_softWare()
         return 0;//正在转换
     }
 }
+void adcScanHandle(void);
 void ADC_CMP_IRQHandler(void)
 {
+
     adc_interrupt_flag_clear(ADC_INT_FLAG_EOC);
     adc_flag_clear(ADC_FLAG_STRC);////常规序列转换开始时硬件置位。软件写0清除。
+    adcScanHandle();
 }

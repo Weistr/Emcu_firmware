@@ -1,9 +1,13 @@
 #include "timer.h"
 #include "gd32e23x_rcu.h"
 #include "main.h"
-
+#include "cmsis_delay.h"
+#include "ticksCost.h"
 void timerConfig(void)
 {
+    //////////////////////////////////////////////////////////
+    /**********TIMER2配置********************************** */
+    ////////////////////////////////////////////////////////////
     /* 使能 TIMER0 时钟 */
     rcu_periph_clock_enable(RCU_TIMER2);
     
@@ -295,6 +299,85 @@ void timerConfig(void)
     /* 配置 TIMER 输出值选择 */
     //timer_output_value_selection_config(TIMER0, TIMER_OUTSEL_DISABLE);
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //////////////////////////////////////////////////////////
+    /**********TIMER5配置********************************** */
+    ////////////////////////////////////////////////////////////
+    /* 使能 TIMERx 时钟 */
+    rcu_periph_clock_enable(RCU_TIMER5);
+    
+    /* 复位 TIMERx */
+    timer_deinit(TIMER5);
+    
+    /* 初始化 TIMER 参数结构体 */
+    timer_struct_para_init(&timer_init_para);
+    
+    /* 配置 TIMER 基本参数 */
+    timer_init_para.prescaler = 7199;          /* 预分频值: 72MHz  -10KHz 0.1ms*/
+    //CTL0:00：无中央对齐计数模式(边沿对齐模式)。 DIR位指定了计数方向
+    timer_init_para.alignedmode = TIMER_COUNTER_EDGE; 
+    timer_init_para.counterdirection = TIMER_COUNTER_UP; /* 向上计数 */
+    timer_init_para.period = 49;              /* 自动重装载值:  5ms */
+    //CTL0: 时钟分频: 不分频 
+    //通过软件配置CKDIV，规定定时器时钟(CK_TIMER) 与死区时间和数字滤波器采样
+    //时钟(DTS)之间的分频系数。
+    timer_init_para.clockdivision = TIMER_CKDIV_DIV1; 
+    //TIMERx_CREP
+    //这些位定义了更新事件的产生速率。重复计数器计数值减为0时产生更新事件。影
+    //子寄存器的更新速率也会受这些位影响(前提是影子寄存器被使能)。
+    timer_init_para.repetitioncounter = 0;     /* 重复计数器值 */
+    
+    /* 初始化 TIMER */
+    timer_init(TIMER5, &timer_init_para);
+    
+    /* 使能自动重装载影子寄存器 */
+    //更新事件发生时，相应的影子寄存器被装入预装载值
+    timer_auto_reload_shadow_enable(TIMER5);
+    
+ 
+    
+    /* 使能 TIMER 中断 */
+    timer_interrupt_enable(TIMER5, TIMER_INT_UP);
+    nvic_irq_enable(TIMER5_IRQn,0x03U);
+    
+    /* 禁用 TIMER 中断 */
+    //timer_interrupt_disable(TIMER0, TIMER_INT_UP);
+    
+    /* 获取 TIMER 中断标志 */
+    //FlagStatus int_flag = timer_interrupt_flag_get(TIMER0, TIMER_INT_FLAG_UP);
+    
+    /* 清除 TIMER 中断标志 */
+    //timer_interrupt_flag_clear(TIMER0, TIMER_INT_FLAG_UP);
+
+
+
+
     /* 使能 TIMER */
+    timer_enable(TIMER5);
     timer_enable(TIMER2);
+    
+}
+extern void timer5ms(void);
+void TIMER5_IRQHandler(void)
+{
+
+    timer_interrupt_flag_clear(TIMER5, TIMER_INT_FLAG_UP);
+
+    timer5ms();
 }

@@ -1,5 +1,6 @@
 #include "systic.h"
 #include "task.h"
+#include "ticksCost.h"
 void systick_config(void)
 {
     /* setup systick timer for 1000Hz interrupts */
@@ -13,5 +14,6 @@ void systick_config(void)
 }
 void SysTick_Handler()
 {
+    ticksCost_handle();
     Task_Marks_Handler_Callback();
 }

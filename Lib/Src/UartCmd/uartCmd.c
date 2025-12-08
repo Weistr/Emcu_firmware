@@ -301,24 +301,8 @@ void uart_cmd_process(const uint8_t *data, uint16_t length)
     *((uint8_t *)(data + cmd_length)) = temp_char;
     
     // 没有找到匹配的命令
-    // 使用uartCmdBuffer_send缓冲区来构建错误消息
-    if (cmd_length < UARTCMD_BUFFER_SEND_SIZE - 20) {
-        int len = snprintf((char *)uartCmdBuffer_send, UARTCMD_BUFFER_SEND_SIZE, "Unknown command: ");
-        if (len > 0 && len < UARTCMD_BUFFER_SEND_SIZE) {
-            // 安全地复制命令字符串
-            int copy_len = cmd_length;
-            if (copy_len > UARTCMD_BUFFER_SEND_SIZE - len - 1) {
-                copy_len = UARTCMD_BUFFER_SEND_SIZE - len - 1;
-            }
-            memcpy(uartCmdBuffer_send + len, data, copy_len);
-            uartCmdBuffer_send[len + copy_len] = '\0';
-            uart_cmd_send_response("%s", (char *)uartCmdBuffer_send);
-        } else {
-            uart_cmd_send_response("Unknown command");
-        }
-    } else {
-        uart_cmd_send_response("Unknown command");
-    }
+    // 调用未知命令处理函数
+    unkonwnCmd();
 }
 
 // ==================== 示例命令处理函数 ====================
@@ -393,4 +377,10 @@ void uart_recive_finish_handle(void)
         //处理收到的数据
         uart_cmd_process(uartCmdBuffer_rcv, uartCmd_byte_counts);
     }
+}
+
+//未找到匹配指令
+void unkonwnCmd()
+{
+
 }

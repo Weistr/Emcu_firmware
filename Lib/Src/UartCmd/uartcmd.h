@@ -15,6 +15,7 @@
 #define UARTCMD_CHECK_MODE_NONE
 #endif
 
+
 // 只有在CRC模式下才包含crc.h
 #if defined(UARTCMD_CHECK_MODE_CRC)
 #include "crc.h"
@@ -57,8 +58,9 @@ int uart_cmd_parse_int(const char *str, int *value);
 int uart_cmd_extract_number(const char *str, int *value);
 
 // 示例命令处理函数
+
 void cmd_test1(const char *args);//args是指令后面的字符
 void cmd_set_val1(const char *args);
 void cmd_get_val1(const char *args);
-
+void unkonwnCmd(void);
 #endif // _UARTCMD_H

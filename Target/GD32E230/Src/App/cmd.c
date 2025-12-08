@@ -1,67 +1,60 @@
 #include "uartCmd.h"
 
 // 用户命令处理函数声明
-void cmd_userFun1(const char *args);
-void cmd_set_userval1(const char *args);
-void cmd_get_userval1(const char *args);
+void cmd_ble_linked(const char *args);
+void cmd_ble_unlinked(const char *args);
+void cmd_get_status(const char *args);
+
 
 // 用户命令数组
 const uart_cmd_t user_cmds[] = {
-    {"userFun1", cmd_userFun1},
-    {"set userval1", cmd_set_userval1},
-    {"get userval1", cmd_get_userval1},
+    {"AT+LINK\r\n+LINK:Online\r\nOK\r\n", cmd_ble_linked},
+    {"CONNECT OK\r\n", cmd_ble_linked},
+    {"AT+LINK\r\n+LINK:Offline\r\nOK\r\n", cmd_ble_unlinked},
+    {"DISCONNECT\r\n", cmd_ble_unlinked},
+    {"get status",cmd_get_status}
+
+
 };
 
 // 用户命令数组大小
 uint16_t user_cmds_count = sizeof(user_cmds) / sizeof(user_cmds[0]);
-//uint16_t user_cmds_count = 100;
-// 用户命令处理函数实现
-void cmd_userFun1(const char *args)
+
+
+
+//蓝牙模块
+uint8_t flag_ble_link = 0xFF;
+void ECB_task_100ms()
+{
+    static uint16_t cnt1 = 0;
+    if(cnt1 < 5)cnt1++;//每500ms执行1次，查询蓝牙状态
+    else if(flag_ble_link==0xFF)
+    {
+        cnt1 = 0;
+        uart_cmd_send_response("AT+LINK?");
+    }
+
+}
+
+
+
+//蓝牙已连接
+void cmd_ble_linked(const char *args)
 {
     (void)args; // 未使用参数
-    // 在这里实现 userFun1 的功能
-    // 可以使用 uart_cmd_send_response 发送响应
-    uart_cmd_send_response("User function1 executed");
-}
-// 示例：解析数字
-int userval1;
-void cmd_set_userval1(const char *args)
-{
-    if (args == NULL || *args == '\0') {
-        uart_cmd_send_response("Error: Need to specify value, e.g.: set userval1=100");
-        return;
-    }
-    
-    // 在这里解析参数并设置 userval1 的值
 
-    if (uart_cmd_extract_number(args, &userval1) == 0) {
-        // 设置 userval1 的值（需要定义变量）
-        // userval1 = value;
-        uart_cmd_send_response("Set userval1 = %d", userval1);
-    } else {
-        uart_cmd_send_response("Error: Cannot parse value");
-    }
+    flag_ble_link = 1;
 }
 
-void cmd_get_userval1(const char *args)
+//蓝牙未连接
+void cmd_ble_unlinked(const char *args)
 {
-    // get 命令不应该有参数
-    if (args != NULL && *args != '\0') {
-        // 检查参数是否包含 '='（错误语法，如 "get userval1 = 100"）
-        const char *ptr = args;
-        while (*ptr != '\0') {
-            if (*ptr == '=') {
-                uart_cmd_send_response("Error: 'get userval1' command does not take arguments with '='");
-                return;
-            }
-            ptr++;
-        }
-        
-        // 如果有其他参数（如 "get userval1 s"），也返回错误
-        uart_cmd_send_response("Error: 'get userval1' command does not take arguments");
-        return;
-    }
-    
-    // 在这里获取 userval1 的值并发送响应
-     uart_cmd_send_response("userval1 = %d", userval1);
+    (void)args; // 未使用参数
+
+    flag_ble_link = 0;
+}
+
+void cmd_get_status(const char *args)
+{
+
 }

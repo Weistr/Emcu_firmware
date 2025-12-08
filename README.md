@@ -16,7 +16,7 @@ ccs选择CCSWORKSPACE,从Target/TMS320Fxx导入project
 编译方法（windows）：
 根目录：
 
-cmake --preset GD32E230 -B Target/GD32E230/build --fresh
+cmake --preset GD32E230 -B Target/GD32E230/build --fresh (推荐每次增加或修改文件或修改核心文件如.s文件后执行)
 
 cmake --build --preset GD32E230构建
 

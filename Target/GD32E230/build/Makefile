@@ -736,6 +736,30 @@ Lib/Src/Task/task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Task/task.c.s
 .PHONY : Lib/Src/Task/task.c.s
 
+Lib/Src/Task/ticksCost.obj: Lib/Src/Task/ticksCost.c.obj
+.PHONY : Lib/Src/Task/ticksCost.obj
+
+# target to build an object file
+Lib/Src/Task/ticksCost.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Task/ticksCost.c.obj
+.PHONY : Lib/Src/Task/ticksCost.c.obj
+
+Lib/Src/Task/ticksCost.i: Lib/Src/Task/ticksCost.c.i
+.PHONY : Lib/Src/Task/ticksCost.i
+
+# target to preprocess a source file
+Lib/Src/Task/ticksCost.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Task/ticksCost.c.i
+.PHONY : Lib/Src/Task/ticksCost.c.i
+
+Lib/Src/Task/ticksCost.s: Lib/Src/Task/ticksCost.c.s
+.PHONY : Lib/Src/Task/ticksCost.s
+
+# target to generate assembly for a file
+Lib/Src/Task/ticksCost.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/Task/ticksCost.c.s
+.PHONY : Lib/Src/Task/ticksCost.c.s
+
 Lib/Src/UartCmd/crc.obj: Lib/Src/UartCmd/crc.c.obj
 .PHONY : Lib/Src/UartCmd/crc.obj
 
@@ -1085,6 +1109,9 @@ help:
 	@echo ... Lib/Src/Task/task.obj
 	@echo ... Lib/Src/Task/task.i
 	@echo ... Lib/Src/Task/task.s
+	@echo ... Lib/Src/Task/ticksCost.obj
+	@echo ... Lib/Src/Task/ticksCost.i
+	@echo ... Lib/Src/Task/ticksCost.s
 	@echo ... Lib/Src/UartCmd/crc.obj
 	@echo ... Lib/Src/UartCmd/crc.i
 	@echo ... Lib/Src/UartCmd/crc.s
