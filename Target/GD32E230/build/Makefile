@@ -808,30 +808,6 @@ Lib/Src/UartCmd/uartCmd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Lib/Src/UartCmd/uartCmd.c.s
 .PHONY : Lib/Src/UartCmd/uartCmd.c.s
 
-Target/GD32E230/Src/App/cmd.obj: Target/GD32E230/Src/App/cmd.c.obj
-.PHONY : Target/GD32E230/Src/App/cmd.obj
-
-# target to build an object file
-Target/GD32E230/Src/App/cmd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/Src/App/cmd.c.obj
-.PHONY : Target/GD32E230/Src/App/cmd.c.obj
-
-Target/GD32E230/Src/App/cmd.i: Target/GD32E230/Src/App/cmd.c.i
-.PHONY : Target/GD32E230/Src/App/cmd.i
-
-# target to preprocess a source file
-Target/GD32E230/Src/App/cmd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/Src/App/cmd.c.i
-.PHONY : Target/GD32E230/Src/App/cmd.c.i
-
-Target/GD32E230/Src/App/cmd.s: Target/GD32E230/Src/App/cmd.c.s
-.PHONY : Target/GD32E230/Src/App/cmd.s
-
-# target to generate assembly for a file
-Target/GD32E230/Src/App/cmd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EMCU_FW.elf.dir\build.make CMakeFiles/EMCU_FW.elf.dir/Target/GD32E230/Src/App/cmd.c.s
-.PHONY : Target/GD32E230/Src/App/cmd.c.s
-
 Target/GD32E230/Src/App/main.obj: Target/GD32E230/Src/App/main.c.obj
 .PHONY : Target/GD32E230/Src/App/main.obj
 
@@ -1118,9 +1094,6 @@ help:
 	@echo ... Lib/Src/UartCmd/uartCmd.obj
 	@echo ... Lib/Src/UartCmd/uartCmd.i
 	@echo ... Lib/Src/UartCmd/uartCmd.s
-	@echo ... Target/GD32E230/Src/App/cmd.obj
-	@echo ... Target/GD32E230/Src/App/cmd.i
-	@echo ... Target/GD32E230/Src/App/cmd.s
 	@echo ... Target/GD32E230/Src/App/main.obj
 	@echo ... Target/GD32E230/Src/App/main.i
 	@echo ... Target/GD32E230/Src/App/main.s

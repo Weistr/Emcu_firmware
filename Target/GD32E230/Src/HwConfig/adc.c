@@ -71,5 +71,5 @@ void ADC_CMP_IRQHandler(void)
 
     adc_interrupt_flag_clear(ADC_INT_FLAG_EOC);
     adc_flag_clear(ADC_FLAG_STRC);////常规序列转换开始时硬件置位。软件写0清除。
-    adcScanHandle();
+
 }

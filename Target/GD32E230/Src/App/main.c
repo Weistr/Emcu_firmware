@@ -13,17 +13,35 @@
 #include "ticksCost.h"
 uint32_t debval[8];
 
-//5ms定时器
-void timer5ms()
+// 用户命令处理函数声明
+void cmd_userFun1(const char *args);
+void cmd_set_userval1(const char *args);
+void cmd_get_userval1(const char *args);
+
+// 用户命令数组
+const uart_cmd_t user_cmds[] = {
+    {"userFun1", cmd_userFun1},
+    {"set userval1", cmd_set_userval1},
+    {"get userval1", cmd_get_userval1},
+};
+
+// 用户命令数组大小
+uint16_t user_cmds_count = sizeof(user_cmds) / sizeof(user_cmds[0]);
+
+// 用户命令处理函数实现
+void cmd_userFun1(const char *args)
 {
-    
-    adc_software_trigger_enable(ADC_REGULAR_CHANNEL);//启动ADC转换
-    ticksCost_StartCount(0);
+
 }
-//adc扫描完成后调用
-void adcScanHandle()
+// 示例：解析数字
+int userval1;
+void cmd_set_userval1(const char *args)
 {
-    debval[0] = ticksCost_StopCount(0);
+}
+
+void cmd_get_userval1(const char *args)
+{
+
 }
 
 
@@ -35,12 +53,11 @@ void basicTask()
     buzzerTask_20ms();
     
 }
-extern void ECB_task_100ms(void);
+
 TASK_COMPONENTS Task_Comps[]=
 {
 //状态  计数  周期  函数
 	{0, 20, 20, basicTask},				/* task 1 Period： 2ms*/
-	{0, 100, 100, ECB_task_100ms},					/* task 5 Period： 500ms */
 //	{0, 500, 500, task_C},					/* task 6 Period： 500ms */
 //	{0, 500, 500, task_D},					/* task 7 Period： 500ms */
 //	{0, 500, 500, task_E},					/* task 8 Period： 500ms */

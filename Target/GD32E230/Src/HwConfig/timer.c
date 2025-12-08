@@ -379,5 +379,4 @@ void TIMER5_IRQHandler(void)
 
     timer_interrupt_flag_clear(TIMER5, TIMER_INT_FLAG_UP);
 
-    timer5ms();
 }
